@@ -19,32 +19,32 @@ public class AnalysedLottosTest {
         LottoGroup lottoGroup = new LottoGroup(Arrays.asList(
             new LottoNumbers(
                 Arrays.asList(
-                    new LottoNumber(new Number(1)),
-                    new LottoNumber(new Number(2)),
-                    new LottoNumber(new Number(3)),
-                    new LottoNumber(new Number(4)),
-                    new LottoNumber(new Number(5)),
-                    new LottoNumber(new Number(6))
+                    LottoNumber.from(1),
+                    LottoNumber.from(2),
+                    LottoNumber.from(3),
+                    LottoNumber.from(4),
+                    LottoNumber.from(5),
+                    LottoNumber.from(6)
                 )
             ),
             new LottoNumbers(
                 Arrays.asList(
-                    new LottoNumber(new Number(1)),
-                    new LottoNumber(new Number(2)),
-                    new LottoNumber(new Number(3)),
-                    new LottoNumber(new Number(4)),
-                    new LottoNumber(new Number(5)),
-                    new LottoNumber(new Number(34))
+                    LottoNumber.from(1),
+                    LottoNumber.from(2),
+                    LottoNumber.from(3),
+                    LottoNumber.from(4),
+                    LottoNumber.from(5),
+                    LottoNumber.from(34)
                 )
             ),
             new LottoNumbers(
                 Arrays.asList(
-                    new LottoNumber(new Number(1)),
-                    new LottoNumber(new Number(2)),
-                    new LottoNumber(new Number(3)),
-                    new LottoNumber(new Number(4)),
-                    new LottoNumber(new Number(5)),
-                    new LottoNumber(new Number(7))
+                    LottoNumber.from(1),
+                    LottoNumber.from(2),
+                    LottoNumber.from(3),
+                    LottoNumber.from(4),
+                    LottoNumber.from(5),
+                    LottoNumber.from(7)
                 )
             )
         ));

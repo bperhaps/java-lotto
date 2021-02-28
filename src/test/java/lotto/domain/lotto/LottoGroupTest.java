@@ -13,21 +13,21 @@ public class LottoGroupTest {
     @DisplayName("로또 그룹의 merge를 수행한다.")
     void add_addLottosViaMergingWithOtherLottoGroup() {
         LottoNumbers lottoNumbers1 = new LottoNumbers(Arrays.asList(
-                new LottoNumber(1),
-                new LottoNumber(2),
-                new LottoNumber(3),
-                new LottoNumber(4),
-                new LottoNumber(5),
-                new LottoNumber(6)
+                LottoNumber.from(1),
+                LottoNumber.from(2),
+                LottoNumber.from(3),
+                LottoNumber.from(4),
+                LottoNumber.from(5),
+                LottoNumber.from(6)
         ));
 
         LottoNumbers lottoNumbers2 = new LottoNumbers(Arrays.asList(
-                new LottoNumber(4),
-                new LottoNumber(5),
-                new LottoNumber(6),
-                new LottoNumber(7),
-                new LottoNumber(8),
-                new LottoNumber(9)
+                LottoNumber.from(4),
+                LottoNumber.from(5),
+                LottoNumber.from(6),
+                LottoNumber.from(7),
+                LottoNumber.from(8),
+                LottoNumber.from(9)
         ));
 
         LottoGroup lottoGroup1 = new LottoGroup(Arrays.asList(

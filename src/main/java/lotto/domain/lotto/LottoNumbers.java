@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Objects;
 
 import lotto.domain.number.LottoNumber;
-import lotto.domain.number.Number;
 
 public class LottoNumbers {
 
@@ -26,7 +25,7 @@ public class LottoNumbers {
     public static LottoNumbers valueOf(String lottoNumbers) {
         return new LottoNumbers(
                 getSplitLottoNumber(lottoNumbers).stream()
-                        .map(lottoNumber -> new LottoNumber(new Number(lottoNumber.trim())))
+                        .map(lottoNumber -> LottoNumber.from(lottoNumber.trim()))
                         .collect(toList())
         );
     }

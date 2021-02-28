@@ -17,7 +17,7 @@ public class WinningNumber {
         LottoNumbers extractedLottoNumbers = LottoNumbers.valueOf(lottoNumber);
         validateBonusNumberFormat(bonusNumber);
 
-        LottoNumber extractedBonusNumber = new LottoNumber(bonusNumber);
+        LottoNumber extractedBonusNumber = LottoNumber.from(bonusNumber);
         validateDuplicateBonusNumberWithLottoNumbers(extractedLottoNumbers, extractedBonusNumber);
 
         this.lottoNumbers = extractedLottoNumbers;

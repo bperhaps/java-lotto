@@ -24,7 +24,7 @@ public class LottoGenerator {
 
         for (int i = LOTTO_NUMBER_MINIMUM; i <= LOTTO_NUMBER_MAXIMUM; i++) {
             lottoNumbers.add(
-                    new LottoNumber(new Number(i))
+                    LottoNumber.from(i)
             );
         }
     }
