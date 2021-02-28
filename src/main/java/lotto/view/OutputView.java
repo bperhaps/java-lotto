@@ -6,7 +6,6 @@ import java.util.List;
 
 import lotto.domain.lotto.LottoGroup;
 import lotto.domain.lotto.LottoNumbers;
-import lotto.domain.lotto.AnalysedLottos;
 import lotto.domain.rank.Rank;
 
 public class OutputView {
@@ -46,7 +45,7 @@ public class OutputView {
     }
 
     private static void printLottoNumbers(LottoNumbers lottoNumbers) {
-        List<String> convertedLottoNumbers = lottoNumbers.toIntegerList().stream()
+        List<String> convertedLottoNumbers = lottoNumbers.getValueAsIntegerList().stream()
                 .map(String::valueOf)
                 .collect(toList());
 
@@ -63,11 +62,14 @@ public class OutputView {
         System.out.println(BONUS_NUMBER);
     }
 
-    public static void statistics(AnalysedLottos analysedLottos) {
+    public static void printWinningStatistics(List<Rank> ranks) {
         System.out.println(WINNING_STATISTICS);
         System.out.println(LINE);
-        analysedLottos.getRankings().forEach(OutputView::printStatisticsAccordingToBonus);
-        System.out.printf(STATISTICS_YIELD_FORMAT, analysedLottos.getYield());
+        ranks.forEach(OutputView::printStatisticsAccordingToBonus);
+    }
+
+    public static void printYield(double yield) {
+        System.out.printf(STATISTICS_YIELD_FORMAT, yield);
     }
 
     private static void printStatisticsAccordingToBonus(Rank rank) {
